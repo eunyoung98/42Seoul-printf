@@ -15,17 +15,21 @@
 int	str_star(char *s, t_info *info, int val)
 {
 	if (info->dot == 1)
+	{
 		while ((info->width)-- > info->prec)
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	else if (info->dot == 0)
+	{
 		while ((info->width)-- > ft_strlen(s))
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	return (val);
 }
 

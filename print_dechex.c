@@ -14,8 +14,8 @@
 
 int	print_left(unsigned int num, t_info *info, int val)
 {
-	int temp;
-	int len;
+	int	temp;
+	int	len;
 
 	len = nbr_len(num, info->type) + info->nbr_minus;
 	val = chk_minus(info, val);

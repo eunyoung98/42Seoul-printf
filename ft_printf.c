@@ -79,7 +79,7 @@ int	chk_format(va_list ap, char *format, int val, t_info *info)
 			while (format[i] != '\0' && chk_loop(format[i]))
 				i = chk_flag(format, info, ap, i) + 1;
 			if (format[i] == '\0')
-				continue;
+				continue ;
 			else
 				i = set_type(format, info, i);
 			val = chk_type(ap, info, val);
@@ -96,7 +96,8 @@ int	ft_printf(const char *format, ...)
 
 	val = 0;
 	va_start(ap, format);
-	if (!(info = malloc(sizeof(t_info))))
+	info = malloc(sizeof(t_info));
+	if (!info)
 		return (-1);
 	val = chk_format(ap, (char *)format, val, info);
 	va_end(ap);

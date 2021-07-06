@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void				print_nbr(unsigned int num, char x)
+void	print_nbr(unsigned int num, char x)
 {
 	char			nbr_index;
 	unsigned int	base;
@@ -38,7 +38,7 @@ void				print_nbr(unsigned int num, char x)
 	}
 }
 
-int					chk_minus(t_info *info, int val)
+int	chk_minus(t_info *info, int val)
 {
 	if (info->nbr_minus == 1)
 	{
@@ -48,14 +48,14 @@ int					chk_minus(t_info *info, int val)
 	return (val);
 }
 
-int					min_int(t_info *info, int val)
+int	min_int(t_info *info, int val)
 {
 	info->nbr_minus = 1;
 	val = print_dechex(info, 2147483648, val);
 	return (val);
 }
 
-int					ft_putnbr_fd(int n, t_info *info, int val)
+int	ft_putnbr_fd(int n, t_info *info, int val)
 {
 	if (info->type == 'd' || info->type == 'i')
 	{

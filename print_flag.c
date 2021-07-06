@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-int		print_zero(unsigned int num, t_info *info, int val)
+int	print_zero(unsigned int num, t_info *info, int val)
 {
-	int temp;
+	int	temp;
 
 	if (info->dot == 1)
 	{
@@ -27,27 +27,33 @@ int		print_zero(unsigned int num, t_info *info, int val)
 		}
 	}
 	else
+	{
 		while ((info->width)-- > nbr_len(num, info->type) + info->nbr_minus)
 		{
 			write(1, "0", 1);
 			val++;
 		}
+	}
 	return (val);
 }
 
-int		print_star(unsigned int num, t_info *info, int val)
+int	print_star(unsigned int num, t_info *info, int val)
 {
 	if (info->dot == 1 && info->prec > nbr_len(num, info->type))
+	{
 		while ((info->width)-- > info->prec + info->nbr_minus)
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	else
+	{
 		while ((info->width)-- > nbr_len(num, info->type) + info->nbr_minus)
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	return (val);
 }

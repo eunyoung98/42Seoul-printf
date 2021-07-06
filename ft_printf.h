@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct	s_info
+typedef struct s_info
 {
 	int		min;
 	int		zero;

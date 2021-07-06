@@ -25,10 +25,12 @@ int	no_spec(t_info *info, int val)
 		}
 	}
 	else
+	{
 		while (info->width-- > 1)
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	return (val);
 }

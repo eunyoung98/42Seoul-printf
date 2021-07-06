@@ -15,23 +15,27 @@
 int	chr_star(t_info *info, int val)
 {
 	if (info->zero == 1)
+	{
 		while ((info->width)-- > 1)
 		{
 			write(1, "0", 1);
 			val++;
 		}
+	}
 	else
+	{
 		while ((info->width)-- > 1)
 		{
 			write(1, " ", 1);
 			val++;
 		}
+	}
 	return (val);
 }
 
 int	ft_putchr(int i, t_info *info, int val)
 {
-	char chr;
+	char	chr;
 
 	chr = i;
 	if (info->min == 1 && info->zero == 1)

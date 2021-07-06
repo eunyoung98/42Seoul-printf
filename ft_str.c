@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int		nbr_len(unsigned long long n, char x)
+int	nbr_len(unsigned long long n, char x)
 {
 	unsigned long long	base;
 	int					len;
@@ -49,12 +49,12 @@ void	write_nbr(unsigned long long n, char x, unsigned int base)
 	}
 }
 
-int		ft_isnum(int c)
+int	ft_isnum(int c)
 {
 	return (c >= '0' && c <= '9');
 }
 
-int		ft_strchr(char *s, int c)
+int	ft_strchr(char *s, int c)
 {
 	int	i;
 
@@ -68,7 +68,7 @@ int		ft_strchr(char *s, int c)
 	return (1);
 }
 
-int		ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
 	unsigned int	idx;
 

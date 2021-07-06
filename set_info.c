@@ -24,7 +24,7 @@ void	init_info(t_info *info)
 	info->type = 0;
 }
 
-int		set_type(char *format, t_info *info, int i)
+int	set_type(char *format, t_info *info, int i)
 {
 	if (ft_strchr("cspdiuxX%%", format[i]))
 		info->type = format[i++];
@@ -33,9 +33,9 @@ int		set_type(char *format, t_info *info, int i)
 	return (i);
 }
 
-int		set_width(char *format, t_info *info, va_list ap, int i)
+int	set_width(char *format, t_info *info, va_list ap, int i)
 {
-	int width;
+	int	width;
 
 	width = 0;
 	info->star = 1;
@@ -58,7 +58,7 @@ int		set_width(char *format, t_info *info, va_list ap, int i)
 	return (i);
 }
 
-int		set_prec(char *format, t_info *info, va_list ap, int i)
+int	set_prec(char *format, t_info *info, va_list ap, int i)
 {
 	int	prec;
 
